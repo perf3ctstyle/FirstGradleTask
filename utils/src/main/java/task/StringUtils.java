@@ -3,7 +3,7 @@ package task;
 import static org.apache.commons.lang3.StringUtils.isEmpty;
 
 public class StringUtils {
-    public boolean isPositiveNumber(String str) {
+    public static boolean isPositiveNumber(String str) {
         double number;
         if (isEmpty(str)) {
             return false;
