@@ -3,8 +3,11 @@ package task;
 import static org.apache.commons.lang3.math.NumberUtils;
 
 public class StringUtils {
+
+    private static final String MINUS = "-";
+    private static final String ZERO = "0";
+
     public static boolean isPositiveNumber(String str) {
-        Double possibleNumber = NumberUtils.createDouble(str);
-        return possibleNumber != null && possibleNumber > 0;
+        return NumberUtils.isCreatable(str) && (!str.startsWith(MINUS)) && (!str.startsWith(ZERO));
     }
 }
